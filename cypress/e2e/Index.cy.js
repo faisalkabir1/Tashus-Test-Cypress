@@ -10,7 +10,7 @@ describe('Visit site and login spec', () => {
    
     //Info.Information();
   });
-  it('Be a Partner', () => {
+  it.only('Be a Partner', () => {
     cy.visit('dev-testing.Tashus.com.au');
    const ln = new Login();
    ln.LoginMethod();
@@ -20,5 +20,6 @@ describe('Visit site and login spec', () => {
     const Info = new Information();
     Info.VehiclesDetails();
     Info.VehicleUniqueName();
+    Info.ExpiryDateMethod();
   });
 });

@@ -21,6 +21,19 @@ class Information {
         cy.get('input.MuiInputBase-input.MuiOutlinedInput-input.MuiInputBase-inputSizeSmall.css-1o6z5ng[name="carNickName"]')
             .type(randomName); 
     }
+    ExpiryDateMethod(){
+        //cy.get('[data-testid="CalendarIcon"] > path')
+        const targetDate = '05/09/2024';
+
+cy.get('input.MuiInputBase-input.MuiOutlinedInput-input.MuiInputBase-inputSizeSmall.MuiInputBase-inputAdornedEnd.css-b52kj1[placeholder="MM/DD/YYYY"]')  
+  .clear()
+  .type(targetDate)
+  .should('have.value', targetDate)
+  .should('have.attr', 'aria-invalid', 'false');
+
+        
+
+    }
 }
 
 export default Information;
