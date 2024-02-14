@@ -11,6 +11,7 @@ cy.get('.MuiAutocomplete-popper').should('be.visible');
 cy.contains('.MuiAutocomplete-option', 'Victoria').click();
 // Assuming you want to click the button regardless of its disabled state
 cy.get('button.MuiButton-containedSuccess').click();
+cy.wait(2000);
 
 
 
